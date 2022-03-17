@@ -5,3 +5,16 @@
   Created by Roman R. on 3/16/22.
   
 */
+"error" = "Galat";
+"error_parsing" = "Galat mengurai data";
+"unknown" = "Tidak diketahui";
+"market_cap" = "Kapitalisasi Pasar";
+"supply" = "Pasokan";
+"volume24" = "Volume (24h)";
+"settings" = "Pengaturan";
+"icon" = "Ikon";
+"white" = "Putih";
+"black" = "Hitam";
+"yellow" = "Kuning";
+"assets" = "Aset";
+"watchlist" = "Pantauan";

@@ -5,3 +5,16 @@
   Created by Roman R. on 3/16/22.
   
 */
+"error" = "Error";
+"error_parsing" = "Error parsing data";
+"unknown" = "Unknown";
+"market_cap" = "Market Cap";
+"supply" = "Supply";
+"volume24" = "Volume (24h)";
+"settings" = "Settings";
+"icon" = "Icon";
+"white" = "White";
+"black" = "Black";
+"yellow" = "Yellow";
+"assets" = "Assets";
+"watchlist" = "Watchlist";

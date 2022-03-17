@@ -7,5 +7,40 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
+	<key>CFBundleIcons</key>
+	<dict>
+        <key>CFBundlePrimaryIcon</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+            <key>AppIcon1</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>AppIcon1</string>
+                </array>
+            </dict>
+			<key>AppIcon2</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>AppIcon2</string>
+				</array>
+			</dict>
+			<key>AppIcon3</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>AppIcon3</string>
+				</array>
+			</dict>
+		</dict>
+        
+	</dict>
 </dict>
 </plist>

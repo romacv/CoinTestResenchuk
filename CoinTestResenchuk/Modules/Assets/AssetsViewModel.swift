@@ -9,34 +9,57 @@ import Foundation
 
 protocol AssetsViewModelProtocol {
     func fetchData()
-    func didReceiveUISelect(object: Assets)
 }
 
 class AssetsViewModel {
+    struct FormattedItem {
+        var id: String!
+        var symbol: String!
+        var name: String!
+        var priceUsdFormatted: String!
+        var changePercent24HrFormatted: String!
+        var isChangePositive: Bool
+        var marketCap: String!
+        var supply: String!
+        var volume24: String!
+    }
+    var formattedItems = [FormattedItem]()
     var view: AssetsViewProtocol!
-    var object = Assets()
+    var apiService = APIService()
     
     func fetchData(search: String = "",
                    limit: Int,
                    offset: Int) {
-        object.didFetch(search: search,
-                        limit: limit,
-                        offset: offset,
-                        withSuccess: { [weak self] (success) in
-            guard let weakSelf = self else { return }
+        apiService.getAssets(type: Assets.CoinResponse.self,
+                             search: search,
+                             limit: limit,
+                             offset: offset) { [weak self] success in
+            guard let successData = success.data else {
+                self?.view.willPresent(error: CustomError(error: nil,
+                                                          errorMessage: "error_parsing".localized()))
+                return
+            }
             if offset == 0 {
-                weakSelf.object = success
+                self?.formattedItems.removeAll()
             }
-            else {
-                weakSelf.object.formattedItems.append(contentsOf: success.formattedItems)
+            for coin in successData {
+                let isChangePositive = Double(coin.changePercent24Hr ?? "0.0") ?? 0 > 0
+                self?.formattedItems.append(
+                    FormattedItem(id: coin.id,
+                                  symbol: coin.symbol,
+                                  name: coin.name,
+                                  priceUsdFormatted: coin.priceUsd?.toUSCurrencyFormat() ?? "unknown".localized(),
+                                  changePercent24HrFormatted: coin.changePercent24Hr?.toPercentFormat() ?? "unknown".localized(),
+                                  isChangePositive: isChangePositive,
+                                  marketCap: coin.marketCapUsd?.toUSCurrencyFormat() ?? "unknown".localized(),
+                                  supply: coin.supply?.toUSCurrencyFormat() ?? "unknown".localized(),
+                                  volume24: coin.volumeUsd24Hr?.toUSCurrencyFormat() ?? "unknown".localized())
+                )
             }
-            weakSelf.view.viewWillPresent(data: weakSelf.object)
-        }) { (err) in
-            self.view.errorWillPresent(error: err)
+            self?.view.willReloadData()
+        } withError: { [weak self] err in
+            self?.view.willPresent(error: err)
         }
-    }
-    
-    func didReceiveUISelect(object: Assets) {
-        debugPrint("Did receive UI object", object)
+        
     }
 }

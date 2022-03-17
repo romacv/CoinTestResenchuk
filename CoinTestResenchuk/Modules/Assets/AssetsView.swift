@@ -9,14 +9,12 @@ import UIKit
 import Alamofire
 
 protocol AssetsViewProtocol {
-    func viewWillPresent(data: Assets)
-    func errorWillPresent(error: Error)
-    func uiDidSelect(object: Assets)
+    func willReloadData()
+    func willPresent(error: CustomError)
 }
 
 class AssetsView: UIViewController, AssetsViewProtocol {
-    // MARK: - Variables
-    var object: Assets?
+    // MARK: - Properties
     let searchController = UISearchController()
     var viewModel: AssetsViewModel! {
         willSet {
@@ -50,11 +48,13 @@ class AssetsView: UIViewController, AssetsViewProtocol {
         definesPresentationContext = true
         searchController.searchResultsUpdater = self
         tableView.delegate = self
-        navigationItem.title = "Assets"
+        self.title = "assets".localized()
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
         tableView.register(UINib(nibName: "CoinTableViewCell", bundle: nil), forCellReuseIdentifier: "CoinTableViewCell")
+        self.tabBarController?.tabBar.layer.borderWidth = 0.5
+        self.tabBarController?.tabBar.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     @objc func refresh(_ refreshControl: UIRefreshControl) {
@@ -66,15 +66,14 @@ class AssetsView: UIViewController, AssetsViewProtocol {
     }
     
     // MARK: - AssetsViewProtocol
-    func viewWillPresent(data: Assets) {
-        object = data
+    func willReloadData() {
         tableView.reloadData()
         loadingData = false
     }
     
-    func errorWillPresent(error: Error) {
-        let alert = UIAlertController(title: "Error",
-                                      message: error.localizedDescription,
+    func willPresent(error: CustomError) {
+        let alert = UIAlertController(title: "error".localized(),
+                                      message: error.errorMessage,
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK",
                                       style: .cancel,
@@ -84,9 +83,25 @@ class AssetsView: UIViewController, AssetsViewProtocol {
                 completion: nil)
     }
     
-    func uiDidSelect(object: Assets) {
-        self.performSegue(withIdentifier: Self.segueShowDetailsIdentifier, sender: nil)
-        viewModel.didReceiveUISelect(object: object)
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Self.segueShowDetailsIdentifier,
+           let destinationVC = segue.destination as? AssetDetailsView {
+            let detailsViewModel = AssetDetailsViewModel()
+            let selectedItem = viewModel.formattedItems[(sender as! NSIndexPath).row]
+            // TODO: For complex apps better to implement coordinator layer
+            detailsViewModel.currentCoin =
+            AssetDetailsViewModel.FormattedItem(id: selectedItem.id,
+                                                symbol: selectedItem.symbol,
+                                                name: selectedItem.name,
+                                                priceUsdFormatted: selectedItem.priceUsdFormatted,
+                                                changePercent24HrFormatted: selectedItem.changePercent24HrFormatted,
+                                                isChangePositive: selectedItem.isChangePositive,
+                                                marketCap: selectedItem.marketCap,
+                                                supply: selectedItem.supply,
+                                                volume24: selectedItem.volume24)
+            destinationVC.viewModel = detailsViewModel
+        }
     }
 }
 
@@ -109,19 +124,13 @@ extension AssetsView: UISearchResultsUpdating {
 extension AssetsView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        guard let object = object else {
-            return 0
-        }
-        return object.formattedItems.count
+        return viewModel.formattedItems.count
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let object = object else {
-            return UITableViewCell()
-        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoinTableViewCell") as! CoinTableViewCell
-        let item = object.formattedItems[indexPath.row]
+        let item = viewModel.formattedItems[indexPath.row]
         cell.setupCell(coinText: item.symbol,
                        coinDescrText: item.name,
                        priceText: item.priceUsdFormatted,
@@ -133,17 +142,13 @@ extension AssetsView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    willDisplay cell: UITableViewCell,
                    forRowAt indexPath: IndexPath) {
-        guard let object = object else {
-            return
-        }
-        if !loadingData && indexPath.row == object.formattedItems.count - 1 {
+        if !loadingData && indexPath.row == viewModel.formattedItems.count - 1 {
             currentOffset += limit
             viewModel.fetchData(search: searchController.searchBar.text ?? "",
                                 limit: limit,
                                 offset: currentOffset)
         }
     }
-    
     
     func tableView(_ tableView: UITableView,
                    heightForHeaderInSection section: Int) -> CGFloat {
@@ -152,6 +157,6 @@ extension AssetsView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        uiDidSelect(object: self.object!)
+        self.performSegue(withIdentifier: Self.segueShowDetailsIdentifier, sender: indexPath)
     }
 }

@@ -9,28 +9,24 @@ import XCTest
 @testable import CoinTestResenchuk
 
 class CoinTestResenchukTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testApiService() {
+        let expectation = self.expectation(description: "Loading...")
+        let apiService = APIService()
+        let limit = 10
+        var itemsCount = 0
+        apiService.getAssets(type: Assets.CoinResponse.self,
+                             search: "",
+                             limit: limit,
+                             offset: 0) { success in
+            itemsCount = success.data?.count ?? 0
+            expectation.fulfill()
+        } withError: { err in
         }
+        
+        wait(for: [expectation], timeout: 3)
+        XCTAssertEqual(itemsCount, limit, "Loaded \(itemsCount) items.")
+        
     }
-
+    
 }

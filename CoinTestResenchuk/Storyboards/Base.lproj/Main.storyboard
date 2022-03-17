@@ -10,7 +10,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="zk6-vh-TXZ">
             <objects>
-                <tabBarController id="Mkq-60-qZ3" sceneMemberID="viewController">
+                <tabBarController id="Mkq-60-qZ3" customClass="TabBarController" customModule="CoinTestResenchuk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y0j-Qf-sSl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,7 +30,7 @@
         <scene sceneID="QN3-AY-TRA">
             <objects>
                 <viewControllerPlaceholder storyboardName="Assets" id="d6f-pg-ksb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="bitcoinsign.circle.fill" id="UCa-bn-ocF"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="UCa-bn-ocF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moG-id-7ov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +40,7 @@
         <scene sceneID="CoJ-yE-xUD">
             <objects>
                 <viewControllerPlaceholder storyboardName="Watchlist" id="xTB-3z-gW6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0eX-dN-5LP"/>
+                    <tabBarItem key="tabBarItem" title="" id="0eX-dN-5LP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5am-sz-hqF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +57,4 @@
             <point key="canvasLocation" x="-737" y="538"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bitcoinsign.circle.fill" width="19" height="19"/>
-    </resources>
 </document>
