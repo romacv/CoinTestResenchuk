@@ -7,16 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12E58E9027E256A600ADA1A0 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E8C27E256A600ADA1A0 /* AssetsView.swift */; };
+		12E58E9127E256A600ADA1A0 /* AssetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E8D27E256A600ADA1A0 /* AssetsViewModel.swift */; };
+		12E58E9227E256A600ADA1A0 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E8E27E256A600ADA1A0 /* Assets.swift */; };
+		12E58E9627E2579E00ADA1A0 /* Assets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E58E9527E2579E00ADA1A0 /* Assets.storyboard */; };
+		12E58EA027E30D3900ADA1A0 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E9E27E30D3900ADA1A0 /* CoinTableViewCell.swift */; };
+		12E58EA127E30D3900ADA1A0 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E58E9F27E30D3900ADA1A0 /* CoinTableViewCell.xib */; };
+		12E58EA327E3160B00ADA1A0 /* Watchlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E58EA227E3160B00ADA1A0 /* Watchlist.storyboard */; };
+		12E58EA527E3161500ADA1A0 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12E58EA427E3161500ADA1A0 /* Settings.storyboard */; };
+		12E58EA927E3231300ADA1A0 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EA827E3231300ADA1A0 /* Coin.swift */; };
+		12E58EAC27E3309A00ADA1A0 /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EAB27E3309A00ADA1A0 /* Extensions+String.swift */; };
+		12E58EB127E342D100ADA1A0 /* AssetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EAD27E342D100ADA1A0 /* AssetDetailsView.swift */; };
+		12E58EB227E342D100ADA1A0 /* AssetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EAE27E342D100ADA1A0 /* AssetDetailsViewModel.swift */; };
+		12E58EB327E342D100ADA1A0 /* AssetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EAF27E342D100ADA1A0 /* AssetDetails.swift */; };
 		12F16A0127E251BD00BD00AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A0027E251BD00BD00AA /* AppDelegate.swift */; };
-		12F16A0327E251BD00BD00AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A0227E251BD00BD00AA /* SceneDelegate.swift */; };
-		12F16A0527E251BD00BD00AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A0427E251BD00BD00AA /* ViewController.swift */; };
 		12F16A0827E251BD00BD00AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F16A0627E251BD00BD00AA /* Main.storyboard */; };
-		12F16A0B27E251BD00BD00AA /* CoinTestResenchuk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A0927E251BD00BD00AA /* CoinTestResenchuk.xcdatamodeld */; };
 		12F16A0D27E251BE00BD00AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F16A0C27E251BE00BD00AA /* Assets.xcassets */; };
 		12F16A1027E251BE00BD00AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F16A0E27E251BE00BD00AA /* LaunchScreen.storyboard */; };
 		12F16A1B27E251BE00BD00AA /* CoinTestResenchukTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A1A27E251BE00BD00AA /* CoinTestResenchukTests.swift */; };
-		12F16A2527E251BE00BD00AA /* CoinTestResenchukUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A2427E251BE00BD00AA /* CoinTestResenchukUITests.swift */; };
-		12F16A2727E251BE00BD00AA /* CoinTestResenchukUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A2627E251BE00BD00AA /* CoinTestResenchukUITestsLaunchTests.swift */; };
+		12F16A3527E2520700BD00AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12F16A3727E2520700BD00AA /* Localizable.strings */; };
+		7EAD9B4B61AD6A8652F46CA1 /* Pods_CoinTestResenchukTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7417720D5D9025611F966C5 /* Pods_CoinTestResenchukTests.framework */; };
+		814FFAECAD8E604C6DD97B76 /* Pods_CoinTestResenchuk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4319A9C3C783FD6AF8D230 /* Pods_CoinTestResenchuk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,30 +38,38 @@
 			remoteGlobalIDString = 12F169FC27E251BD00BD00AA;
 			remoteInfo = CoinTestResenchuk;
 		};
-		12F16A2127E251BE00BD00AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12F169F527E251BD00BD00AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12F169FC27E251BD00BD00AA;
-			remoteInfo = CoinTestResenchuk;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09996B1F8D515AE391E72789 /* Pods-CoinTestResenchukTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTestResenchukTests.debug.xcconfig"; path = "Target Support Files/Pods-CoinTestResenchukTests/Pods-CoinTestResenchukTests.debug.xcconfig"; sourceTree = "<group>"; };
+		12E58E8C27E256A600ADA1A0 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
+		12E58E8D27E256A600ADA1A0 /* AssetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewModel.swift; sourceTree = "<group>"; };
+		12E58E8E27E256A600ADA1A0 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		12E58E9527E2579E00ADA1A0 /* Assets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Assets.storyboard; sourceTree = "<group>"; };
+		12E58E9E27E30D3900ADA1A0 /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
+		12E58E9F27E30D3900ADA1A0 /* CoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
+		12E58EA227E3160B00ADA1A0 /* Watchlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Watchlist.storyboard; sourceTree = "<group>"; };
+		12E58EA427E3161500ADA1A0 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		12E58EA827E3231300ADA1A0 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		12E58EAB27E3309A00ADA1A0 /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
+		12E58EAD27E342D100ADA1A0 /* AssetDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsView.swift; sourceTree = "<group>"; };
+		12E58EAE27E342D100ADA1A0 /* AssetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsViewModel.swift; sourceTree = "<group>"; };
+		12E58EAF27E342D100ADA1A0 /* AssetDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetails.swift; sourceTree = "<group>"; };
 		12F169FD27E251BD00BD00AA /* CoinTestResenchuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinTestResenchuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F16A0027E251BD00BD00AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12F16A0227E251BD00BD00AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12F16A0427E251BD00BD00AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12F16A0727E251BD00BD00AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		12F16A0A27E251BD00BD00AA /* CoinTestResenchuk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoinTestResenchuk.xcdatamodel; sourceTree = "<group>"; };
 		12F16A0C27E251BE00BD00AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12F16A0F27E251BE00BD00AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12F16A1127E251BE00BD00AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12F16A1627E251BE00BD00AA /* CoinTestResenchukTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinTestResenchukTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F16A1A27E251BE00BD00AA /* CoinTestResenchukTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTestResenchukTests.swift; sourceTree = "<group>"; };
-		12F16A2027E251BE00BD00AA /* CoinTestResenchukUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinTestResenchukUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		12F16A2427E251BE00BD00AA /* CoinTestResenchukUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTestResenchukUITests.swift; sourceTree = "<group>"; };
-		12F16A2627E251BE00BD00AA /* CoinTestResenchukUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTestResenchukUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12F16A3627E2520700BD00AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		12F16A3827E2522500BD00AA /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1C4319A9C3C783FD6AF8D230 /* Pods_CoinTestResenchuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinTestResenchuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87EE3A784FD7F956507D0171 /* Pods-CoinTestResenchuk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTestResenchuk.release.xcconfig"; path = "Target Support Files/Pods-CoinTestResenchuk/Pods-CoinTestResenchuk.release.xcconfig"; sourceTree = "<group>"; };
+		C210919E7EA4EFD7F4F9DA5B /* Pods-CoinTestResenchuk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTestResenchuk.debug.xcconfig"; path = "Target Support Files/Pods-CoinTestResenchuk/Pods-CoinTestResenchuk.debug.xcconfig"; sourceTree = "<group>"; };
+		C7417720D5D9025611F966C5 /* Pods_CoinTestResenchukTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinTestResenchukTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE103CB3D099CD0325610AB8 /* Pods-CoinTestResenchukTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTestResenchukTests.release.xcconfig"; path = "Target Support Files/Pods-CoinTestResenchukTests/Pods-CoinTestResenchukTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814FFAECAD8E604C6DD97B76 /* Pods_CoinTestResenchuk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,26 +85,97 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		12F16A1D27E251BE00BD00AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7EAD9B4B61AD6A8652F46CA1 /* Pods_CoinTestResenchukTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12E58E9427E256AF00ADA1A0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				12E58E8C27E256A600ADA1A0 /* AssetsView.swift */,
+				12E58E8D27E256A600ADA1A0 /* AssetsViewModel.swift */,
+				12E58E8E27E256A600ADA1A0 /* Assets.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		12E58E9727E257A400ADA1A0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				12F16A0E27E251BE00BD00AA /* LaunchScreen.storyboard */,
+				12F16A0627E251BD00BD00AA /* Main.storyboard */,
+				12E58E9527E2579E00ADA1A0 /* Assets.storyboard */,
+				12E58EA227E3160B00ADA1A0 /* Watchlist.storyboard */,
+				12E58EA427E3161500ADA1A0 /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		12E58E9827E308BB00ADA1A0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				12E58E9427E256AF00ADA1A0 /* Assets */,
+				12E58EB527E342DB00ADA1A0 /* AssetDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		12E58E9927E3090C00ADA1A0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				12F16A0027E251BD00BD00AA /* AppDelegate.swift */,
+				12F16A1127E251BE00BD00AA /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		12E58E9A27E3091900ADA1A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12F16A0C27E251BE00BD00AA /* Assets.xcassets */,
+				12F16A3727E2520700BD00AA /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		12E58E9D27E30D2000ADA1A0 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				12E58E9E27E30D3900ADA1A0 /* CoinTableViewCell.swift */,
+				12E58E9F27E30D3900ADA1A0 /* CoinTableViewCell.xib */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		12E58EAA27E3231700ADA1A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12E58EA827E3231300ADA1A0 /* Coin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12E58EB527E342DB00ADA1A0 /* AssetDetails */ = {
+			isa = PBXGroup;
+			children = (
+				12E58EAD27E342D100ADA1A0 /* AssetDetailsView.swift */,
+				12E58EAE27E342D100ADA1A0 /* AssetDetailsViewModel.swift */,
+				12E58EAF27E342D100ADA1A0 /* AssetDetails.swift */,
+			);
+			path = AssetDetails;
+			sourceTree = "<group>";
+		};
 		12F169F427E251BD00BD00AA = {
 			isa = PBXGroup;
 			children = (
 				12F169FF27E251BD00BD00AA /* CoinTestResenchuk */,
 				12F16A1927E251BE00BD00AA /* CoinTestResenchukTests */,
-				12F16A2327E251BE00BD00AA /* CoinTestResenchukUITests */,
 				12F169FE27E251BD00BD00AA /* Products */,
+				6EEEE6496E360236ECC7072E /* Pods */,
+				14C816A79297FDD6190FC451 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +184,6 @@
 			children = (
 				12F169FD27E251BD00BD00AA /* CoinTestResenchuk.app */,
 				12F16A1627E251BE00BD00AA /* CoinTestResenchukTests.xctest */,
-				12F16A2027E251BE00BD00AA /* CoinTestResenchukUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,14 +191,13 @@
 		12F169FF27E251BD00BD00AA /* CoinTestResenchuk */ = {
 			isa = PBXGroup;
 			children = (
-				12F16A0027E251BD00BD00AA /* AppDelegate.swift */,
-				12F16A0227E251BD00BD00AA /* SceneDelegate.swift */,
-				12F16A0427E251BD00BD00AA /* ViewController.swift */,
-				12F16A0627E251BD00BD00AA /* Main.storyboard */,
-				12F16A0C27E251BE00BD00AA /* Assets.xcassets */,
-				12F16A0E27E251BE00BD00AA /* LaunchScreen.storyboard */,
-				12F16A1127E251BE00BD00AA /* Info.plist */,
-				12F16A0927E251BD00BD00AA /* CoinTestResenchuk.xcdatamodeld */,
+				12E58E9927E3090C00ADA1A0 /* App */,
+				12E58E9827E308BB00ADA1A0 /* Modules */,
+				12E58E9A27E3091900ADA1A0 /* Resources */,
+				12E58E9727E257A400ADA1A0 /* Storyboards */,
+				12E58E9D27E30D2000ADA1A0 /* CommonViews */,
+				12E58EAA27E3231700ADA1A0 /* Models */,
+				12E58EAB27E3309A00ADA1A0 /* Extensions+String.swift */,
 			);
 			path = CoinTestResenchuk;
 			sourceTree = "<group>";
@@ -121,13 +210,24 @@
 			path = CoinTestResenchukTests;
 			sourceTree = "<group>";
 		};
-		12F16A2327E251BE00BD00AA /* CoinTestResenchukUITests */ = {
+		14C816A79297FDD6190FC451 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12F16A2427E251BE00BD00AA /* CoinTestResenchukUITests.swift */,
-				12F16A2627E251BE00BD00AA /* CoinTestResenchukUITestsLaunchTests.swift */,
+				1C4319A9C3C783FD6AF8D230 /* Pods_CoinTestResenchuk.framework */,
+				C7417720D5D9025611F966C5 /* Pods_CoinTestResenchukTests.framework */,
 			);
-			path = CoinTestResenchukUITests;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EEEE6496E360236ECC7072E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C210919E7EA4EFD7F4F9DA5B /* Pods-CoinTestResenchuk.debug.xcconfig */,
+				87EE3A784FD7F956507D0171 /* Pods-CoinTestResenchuk.release.xcconfig */,
+				09996B1F8D515AE391E72789 /* Pods-CoinTestResenchukTests.debug.xcconfig */,
+				EE103CB3D099CD0325610AB8 /* Pods-CoinTestResenchukTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12F16A2A27E251BE00BD00AA /* Build configuration list for PBXNativeTarget "CoinTestResenchuk" */;
 			buildPhases = (
+				8DB5850462F0141DE42663E6 /* [CP] Check Pods Manifest.lock */,
 				12F169F927E251BD00BD00AA /* Sources */,
 				12F169FA27E251BD00BD00AA /* Frameworks */,
 				12F169FB27E251BD00BD00AA /* Resources */,
+				B849257009954D1B2E60BBF8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12F16A2D27E251BE00BD00AA /* Build configuration list for PBXNativeTarget "CoinTestResenchukTests" */;
 			buildPhases = (
+				4D4A1F243205C4A7AACBDDBE /* [CP] Check Pods Manifest.lock */,
 				12F16A1227E251BE00BD00AA /* Sources */,
 				12F16A1327E251BE00BD00AA /* Frameworks */,
 				12F16A1427E251BE00BD00AA /* Resources */,
@@ -167,24 +270,6 @@
 			productName = CoinTestResenchukTests;
 			productReference = 12F16A1627E251BE00BD00AA /* CoinTestResenchukTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		12F16A1F27E251BE00BD00AA /* CoinTestResenchukUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12F16A3027E251BE00BD00AA /* Build configuration list for PBXNativeTarget "CoinTestResenchukUITests" */;
-			buildPhases = (
-				12F16A1C27E251BE00BD00AA /* Sources */,
-				12F16A1D27E251BE00BD00AA /* Frameworks */,
-				12F16A1E27E251BE00BD00AA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				12F16A2227E251BE00BD00AA /* PBXTargetDependency */,
-			);
-			name = CoinTestResenchukUITests;
-			productName = CoinTestResenchukUITests;
-			productReference = 12F16A2027E251BE00BD00AA /* CoinTestResenchukUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -203,10 +288,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 12F169FC27E251BD00BD00AA;
 					};
-					12F16A1F27E251BE00BD00AA = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 12F169FC27E251BD00BD00AA;
-					};
 				};
 			};
 			buildConfigurationList = 12F169F827E251BD00BD00AA /* Build configuration list for PBXProject "CoinTestResenchuk" */;
@@ -216,6 +297,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 12F169F427E251BD00BD00AA;
 			productRefGroup = 12F169FE27E251BD00BD00AA /* Products */;
@@ -224,7 +306,6 @@
 			targets = (
 				12F169FC27E251BD00BD00AA /* CoinTestResenchuk */,
 				12F16A1527E251BE00BD00AA /* CoinTestResenchukTests */,
-				12F16A1F27E251BE00BD00AA /* CoinTestResenchukUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F16A1027E251BE00BD00AA /* LaunchScreen.storyboard in Resources */,
+				12E58EA327E3160B00ADA1A0 /* Watchlist.storyboard in Resources */,
+				12F16A3527E2520700BD00AA /* Localizable.strings in Resources */,
+				12E58EA527E3161500ADA1A0 /* Settings.storyboard in Resources */,
+				12E58EA127E30D3900ADA1A0 /* CoinTableViewCell.xib in Resources */,
+				12E58E9627E2579E00ADA1A0 /* Assets.storyboard in Resources */,
 				12F16A0D27E251BE00BD00AA /* Assets.xcassets in Resources */,
 				12F16A0827E251BD00BD00AA /* Main.storyboard in Resources */,
 			);
@@ -247,24 +333,87 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		12F16A1E27E251BE00BD00AA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D4A1F243205C4A7AACBDDBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinTestResenchukTests-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		8DB5850462F0141DE42663E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinTestResenchuk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B849257009954D1B2E60BBF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinTestResenchuk/Pods-CoinTestResenchuk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinTestResenchuk/Pods-CoinTestResenchuk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinTestResenchuk/Pods-CoinTestResenchuk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12F169F927E251BD00BD00AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12F16A0527E251BD00BD00AA /* ViewController.swift in Sources */,
+				12E58EAC27E3309A00ADA1A0 /* Extensions+String.swift in Sources */,
 				12F16A0127E251BD00BD00AA /* AppDelegate.swift in Sources */,
-				12F16A0327E251BD00BD00AA /* SceneDelegate.swift in Sources */,
-				12F16A0B27E251BD00BD00AA /* CoinTestResenchuk.xcdatamodeld in Sources */,
+				12E58EB127E342D100ADA1A0 /* AssetDetailsView.swift in Sources */,
+				12E58EB227E342D100ADA1A0 /* AssetDetailsViewModel.swift in Sources */,
+				12E58E9027E256A600ADA1A0 /* AssetsView.swift in Sources */,
+				12E58E9227E256A600ADA1A0 /* Assets.swift in Sources */,
+				12E58E9127E256A600ADA1A0 /* AssetsViewModel.swift in Sources */,
+				12E58EA927E3231300ADA1A0 /* Coin.swift in Sources */,
+				12E58EA027E30D3900ADA1A0 /* CoinTableViewCell.swift in Sources */,
+				12E58EB327E342D100ADA1A0 /* AssetDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,15 +425,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		12F16A1C27E251BE00BD00AA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12F16A2727E251BE00BD00AA /* CoinTestResenchukUITestsLaunchTests.swift in Sources */,
-				12F16A2527E251BE00BD00AA /* CoinTestResenchukUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -292,11 +432,6 @@
 			isa = PBXTargetDependency;
 			target = 12F169FC27E251BD00BD00AA /* CoinTestResenchuk */;
 			targetProxy = 12F16A1727E251BE00BD00AA /* PBXContainerItemProxy */;
-		};
-		12F16A2227E251BE00BD00AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 12F169FC27E251BD00BD00AA /* CoinTestResenchuk */;
-			targetProxy = 12F16A2127E251BE00BD00AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -317,6 +452,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		12F16A3727E2520700BD00AA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12F16A3627E2520700BD00AA /* en */,
+				12F16A3827E2522500BD00AA /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -324,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -371,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -385,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -426,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,18 +584,22 @@
 		};
 		12F16A2B27E251BE00BD00AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C210919E7EA4EFD7F4F9DA5B /* Pods-CoinTestResenchuk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoinTestResenchuk/Info.plist;
+				INFOPLIST_FILE = CoinTestResenchuk/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,24 +609,28 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		12F16A2C27E251BE00BD00AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87EE3A784FD7F956507D0171 /* Pods-CoinTestResenchuk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoinTestResenchuk/Info.plist;
+				INFOPLIST_FILE = CoinTestResenchuk/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,19 +640,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		12F16A2E27E251BE00BD00AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09996B1F8D515AE391E72789 /* Pods-CoinTestResenchukTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = romacv.CoinTestResenchukTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,13 +666,14 @@
 		};
 		12F16A2F27E251BE00BD00AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE103CB3D099CD0325610AB8 /* Pods-CoinTestResenchukTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = romacv.CoinTestResenchukTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,40 +681,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinTestResenchuk.app/CoinTestResenchuk";
-			};
-			name = Release;
-		};
-		12F16A3127E251BE00BD00AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = romacv.CoinTestResenchukUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoinTestResenchuk;
-			};
-			name = Debug;
-		};
-		12F16A3227E251BE00BD00AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = romacv.CoinTestResenchukUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoinTestResenchuk;
 			};
 			name = Release;
 		};
@@ -592,29 +714,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12F16A3027E251BE00BD00AA /* Build configuration list for PBXNativeTarget "CoinTestResenchukUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				12F16A3127E251BE00BD00AA /* Debug */,
-				12F16A3227E251BE00BD00AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		12F16A0927E251BD00BD00AA /* CoinTestResenchuk.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				12F16A0A27E251BD00BD00AA /* CoinTestResenchuk.xcdatamodel */,
-			);
-			currentVersion = 12F16A0A27E251BD00BD00AA /* CoinTestResenchuk.xcdatamodel */;
-			path = CoinTestResenchuk.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 12F169F527E251BD00BD00AA /* Project object */;
 }
