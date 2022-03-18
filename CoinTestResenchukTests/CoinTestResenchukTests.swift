@@ -46,4 +46,22 @@ class CoinTestResenchukTests: XCTestCase {
         
     }
     
+    func testApiServiceHistoryPrice() {
+        let expectation = self.expectation(description: "Loading...")
+        let apiService = APIService()
+        var itemsCount = 0
+        let interval = "m5"
+        let id = "bitcoin" // not 'btc'
+        apiService.getHistoryPrice(type: AssetDetails.HistoryResponse.self,
+                                   id: id,
+                                   interval: interval) { success in
+            itemsCount = success.data?.count ?? 0
+            expectation.fulfill()
+        } withError: { err in
+        }
+        
+        wait(for: [expectation], timeout: 3)
+        XCTAssertTrue(itemsCount > 0)
+        
+    }
 }
