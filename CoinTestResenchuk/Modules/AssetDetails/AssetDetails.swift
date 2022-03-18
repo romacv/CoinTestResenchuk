@@ -5,10 +5,13 @@
 //  Created Roman R. on 3/17/22.
 //
 
-/// AssetDetails Model
-struct  AssetDetails {
+struct AssetDetails {
+    struct History: Codable {
+        var priceUsd: String
+        var time: Int
+    }
     
-    // Your Model Structure
-    var id : Int?
-    var name : Int?
+    struct HistoryResponse: Codable {
+        var data: [History]?
+    }
 }

@@ -10,7 +10,7 @@
 "unknown" = "Unknown";
 "market_cap" = "Market Cap";
 "supply" = "Supply";
-"volume24" = "Volume (24h)";
+"volume_24" = "Volume (24h)";
 "settings" = "Settings";
 "icon" = "Icon";
 "white" = "White";
@@ -18,3 +18,5 @@
 "yellow" = "Yellow";
 "assets" = "Assets";
 "watchlist" = "Watchlist";
+"empty_title" = "No assets yet";
+"empty_subtitle" = "Your Watchlist will appear here";

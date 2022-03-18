@@ -53,8 +53,6 @@ class AssetsView: UIViewController, AssetsViewProtocol {
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
         tableView.register(UINib(nibName: "CoinTableViewCell", bundle: nil), forCellReuseIdentifier: "CoinTableViewCell")
-        self.tabBarController?.tabBar.layer.borderWidth = 0.5
-        self.tabBarController?.tabBar.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     @objc func refresh(_ refreshControl: UIRefreshControl) {

@@ -10,7 +10,7 @@
 "unknown" = "Tidak diketahui";
 "market_cap" = "Kapitalisasi Pasar";
 "supply" = "Pasokan";
-"volume24" = "Volume (24h)";
+"volume_24" = "Volume (24h)";
 "settings" = "Pengaturan";
 "icon" = "Ikon";
 "white" = "Putih";
@@ -18,3 +18,5 @@
 "yellow" = "Kuning";
 "assets" = "Aset";
 "watchlist" = "Pantauan";
+"empty_title" = "Belum ada aset";
+"empty_subtitle" = "Daftar pantauan Anda akan muncul di sini";

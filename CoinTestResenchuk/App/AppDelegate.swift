@@ -14,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UITabBarController
+        tabBarController.tabBar.layer.borderWidth = 0.5
+        tabBarController.tabBar.layer.borderColor = UIColor.lightGray.cgColor
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         return true
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		127774EF27E4AD7E00FFFFD8 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127774EE27E4AD7E00FFFFD8 /* ChartView.swift */; };
 		12E58E9027E256A600ADA1A0 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E8C27E256A600ADA1A0 /* AssetsView.swift */; };
 		12E58E9127E256A600ADA1A0 /* AssetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E8D27E256A600ADA1A0 /* AssetsViewModel.swift */; };
 		12E58E9227E256A600ADA1A0 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E8E27E256A600ADA1A0 /* Assets.swift */; };
@@ -33,6 +34,10 @@
 		12E58ED327E3717E00ADA1A0 /* AppIcon1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E58ED027E3717E00ADA1A0 /* AppIcon1@3x.png */; };
 		12E58ED527E3783300ADA1A0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58ED427E3783300ADA1A0 /* APIService.swift */; };
 		12E58ED727E38E0400ADA1A0 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58ED627E38E0400ADA1A0 /* CustomError.swift */; };
+		12E58EDF27E48B4200ADA1A0 /* WatchlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EDC27E48B4200ADA1A0 /* WatchlistViewModel.swift */; };
+		12E58EE027E48B4200ADA1A0 /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EDD27E48B4200ADA1A0 /* Watchlist.swift */; };
+		12E58EE127E48B4200ADA1A0 /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EDE27E48B4200ADA1A0 /* WatchlistView.swift */; };
+		12E58EE327E48FE500ADA1A0 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58EE227E48FE500ADA1A0 /* LocalService.swift */; };
 		12F16A0127E251BD00BD00AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F16A0027E251BD00BD00AA /* AppDelegate.swift */; };
 		12F16A0827E251BD00BD00AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F16A0627E251BD00BD00AA /* Main.storyboard */; };
 		12F16A0D27E251BE00BD00AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F16A0C27E251BE00BD00AA /* Assets.xcassets */; };
@@ -55,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		09996B1F8D515AE391E72789 /* Pods-CoinTestResenchukTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinTestResenchukTests.debug.xcconfig"; path = "Target Support Files/Pods-CoinTestResenchukTests/Pods-CoinTestResenchukTests.debug.xcconfig"; sourceTree = "<group>"; };
+		127774EE27E4AD7E00FFFFD8 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		12E58E8C27E256A600ADA1A0 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
 		12E58E8D27E256A600ADA1A0 /* AssetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewModel.swift; sourceTree = "<group>"; };
 		12E58E8E27E256A600ADA1A0 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 		12E58ED027E3717E00ADA1A0 /* AppIcon1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon1@3x.png"; sourceTree = "<group>"; };
 		12E58ED427E3783300ADA1A0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		12E58ED627E38E0400ADA1A0 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		12E58EDC27E48B4200ADA1A0 /* WatchlistViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchlistViewModel.swift; sourceTree = "<group>"; };
+		12E58EDD27E48B4200ADA1A0 /* Watchlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
+		12E58EDE27E48B4200ADA1A0 /* WatchlistView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
+		12E58EE227E48FE500ADA1A0 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		12F169FD27E251BD00BD00AA /* CoinTestResenchuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinTestResenchuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F16A0027E251BD00BD00AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12F16A0727E251BD00BD00AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,9 +131,9 @@
 		12E58E9427E256AF00ADA1A0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				12E58E8E27E256A600ADA1A0 /* Assets.swift */,
 				12E58E8C27E256A600ADA1A0 /* AssetsView.swift */,
 				12E58E8D27E256A600ADA1A0 /* AssetsViewModel.swift */,
-				12E58E8E27E256A600ADA1A0 /* Assets.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -146,6 +156,7 @@
 				12E58E9427E256AF00ADA1A0 /* Assets */,
 				12E58EB527E342DB00ADA1A0 /* AssetDetails */,
 				12E58EB827E3617000ADA1A0 /* Settings */,
+				12E58EDB27E48B4200ADA1A0 /* Watchlist */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -174,6 +185,7 @@
 			children = (
 				12E58E9E27E30D3900ADA1A0 /* CoinTableViewCell.swift */,
 				12E58E9F27E30D3900ADA1A0 /* CoinTableViewCell.xib */,
+				127774EE27E4AD7E00FFFFD8 /* ChartView.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				12E58ED427E3783300ADA1A0 /* APIService.swift */,
+				12E58EE227E48FE500ADA1A0 /* LocalService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -243,6 +256,16 @@
 				12E58ED627E38E0400ADA1A0 /* CustomError.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		12E58EDB27E48B4200ADA1A0 /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				12E58EDD27E48B4200ADA1A0 /* Watchlist.swift */,
+				12E58EDE27E48B4200ADA1A0 /* WatchlistView.swift */,
+				12E58EDC27E48B4200ADA1A0 /* WatchlistViewModel.swift */,
+			);
+			path = Watchlist;
 			sourceTree = "<group>";
 		};
 		12F169F427E251BD00BD00AA = {
@@ -494,16 +517,21 @@
 			files = (
 				12E58EAC27E3309A00ADA1A0 /* Extensions+String.swift in Sources */,
 				12F16A0127E251BD00BD00AA /* AppDelegate.swift in Sources */,
+				12E58EDF27E48B4200ADA1A0 /* WatchlistViewModel.swift in Sources */,
 				12E58EBE27E36A8B00ADA1A0 /* SetIconTableViewController.swift in Sources */,
 				12E58EB127E342D100ADA1A0 /* AssetDetailsView.swift in Sources */,
 				12E58EB727E3616B00ADA1A0 /* SettingsTableViewController.swift in Sources */,
 				12E58EB227E342D100ADA1A0 /* AssetDetailsViewModel.swift in Sources */,
+				12E58EE127E48B4200ADA1A0 /* WatchlistView.swift in Sources */,
 				12E58E9027E256A600ADA1A0 /* AssetsView.swift in Sources */,
 				12E58ED727E38E0400ADA1A0 /* CustomError.swift in Sources */,
+				127774EF27E4AD7E00FFFFD8 /* ChartView.swift in Sources */,
 				12E58E9227E256A600ADA1A0 /* Assets.swift in Sources */,
+				12E58EE327E48FE500ADA1A0 /* LocalService.swift in Sources */,
 				12E58E9127E256A600ADA1A0 /* AssetsViewModel.swift in Sources */,
 				12E58ED527E3783300ADA1A0 /* APIService.swift in Sources */,
 				12E58EA927E3231300ADA1A0 /* Coin.swift in Sources */,
+				12E58EE027E48B4200ADA1A0 /* Watchlist.swift in Sources */,
 				12E58EA027E30D3900ADA1A0 /* CoinTableViewCell.swift in Sources */,
 				12E58EB327E342D100ADA1A0 /* AssetDetails.swift in Sources */,
 			);

@@ -8,7 +8,8 @@
 import UIKit
 
 protocol AssetDetailsViewProtocol {
-    func viewWillPresent(data: AssetDetails)
+    func willPresent(error: CustomError)
+    func willReloadData()
 }
 
 class AssetDetailsView: UIViewController, AssetDetailsViewProtocol {
@@ -22,22 +23,24 @@ class AssetDetailsView: UIViewController, AssetDetailsViewProtocol {
     static let negativeColor =  UIColor(red: 1, green: 0.231, blue: 0.188, alpha: 1)
 
     // MARK: - IB Outlets
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var favoritesButton: UIButton!
     @IBOutlet weak var coinNameLabel: UILabel!
     @IBOutlet weak var coinSymbolLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var changesLabel: UILabel!
+    @IBOutlet weak var chartView: ChartView!
     
     // MARK: - IB Actions
     @IBAction func tapFavorites(_ sender: Any) {
-        favoritesButton.isSelected.toggle()
+        viewModel.favoritesAction(isAdd: !favoritesButton.isSelected)
     }
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         viewModel.fetchData()
+        activityIndicator.startAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +49,24 @@ class AssetDetailsView: UIViewController, AssetDetailsViewProtocol {
     }
     
     // MARK: - AssetDetailsViewProtocol
-    func viewWillPresent(data: AssetDetails) {
-        
+    func willPresent(error: CustomError) {
+        let alert = UIAlertController(title: "error".localized(),
+                                      message: error.errorMessage,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .cancel,
+                                      handler: nil))
+        present(alert,
+                animated: true,
+                completion: nil)
+        activityIndicator.stopAnimating()
+    }
+    
+    func willReloadData() {
+        activityIndicator.stopAnimating()
+        favoritesButton.isSelected = viewModel.isFavorite
+        chartView.values = viewModel.chartPoints
+        chartView.setNeedsDisplay()
     }
     
     // MARK: - Actions

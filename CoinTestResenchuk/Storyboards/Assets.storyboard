@@ -54,17 +54,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="120.53571428571428"/>
+            <point key="canvasLocation" x="967" y="120"/>
         </scene>
         <!--Asset Details View-->
         <scene sceneID="i3r-q8-PZc">
             <objects>
-                <viewController id="X1h-Fy-F9Z" customClass="AssetDetailsView" customModule="CoinTestResenchuk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssetsDetails" id="X1h-Fy-F9Z" customClass="AssetDetailsView" customModule="CoinTestResenchuk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qld-Gt-iCk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-eh-NFk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-eh-NFk">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="4J3-7k-Hen" userLabel="HeaderView">
@@ -83,10 +83,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtV-Ap-sFS">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtV-Ap-sFS" customClass="ChartView" customModule="CoinTestResenchuk" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="149" width="375" height="158"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3hN-y0-zls">
+                                            <rect key="frame" x="169" y="209.66666666666666" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     <constraints>
@@ -94,9 +97,11 @@
                                         <constraint firstItem="iaP-ZT-3XM" firstAttribute="centerX" secondItem="4J3-7k-Hen" secondAttribute="centerX" id="9F8-w7-7kT"/>
                                         <constraint firstItem="zxd-6L-lNB" firstAttribute="centerX" secondItem="4J3-7k-Hen" secondAttribute="centerX" id="IVw-Fg-STT"/>
                                         <constraint firstItem="wtV-Ap-sFS" firstAttribute="top" secondItem="zxd-6L-lNB" secondAttribute="bottom" constant="25" id="SWV-4E-cGK"/>
+                                        <constraint firstItem="3hN-y0-zls" firstAttribute="centerY" secondItem="wtV-Ap-sFS" secondAttribute="centerY" id="VDS-h1-OZp"/>
                                         <constraint firstItem="iaP-ZT-3XM" firstAttribute="top" secondItem="4J3-7k-Hen" secondAttribute="top" constant="12" id="aF4-Uy-Sad"/>
                                         <constraint firstAttribute="trailing" secondItem="wtV-Ap-sFS" secondAttribute="trailing" id="fvO-4f-cvX"/>
                                         <constraint firstAttribute="bottom" secondItem="wtV-Ap-sFS" secondAttribute="bottom" constant="25" id="k6f-tf-OFC"/>
+                                        <constraint firstItem="3hN-y0-zls" firstAttribute="centerX" secondItem="wtV-Ap-sFS" secondAttribute="centerX" id="p6L-76-lzA"/>
                                         <constraint firstItem="wtV-Ap-sFS" firstAttribute="leading" secondItem="4J3-7k-Hen" secondAttribute="leading" id="qt4-qt-Gdn"/>
                                     </constraints>
                                 </view>
@@ -144,17 +149,17 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="8TI-nI-yGA">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="bof-3l-G4j">
-                            <rect key="frame" x="115.66666666666669" y="0.0" width="144" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="116" y="0.0" width="144" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ae-UY-PG5">
-                                    <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
+                                    <rect key="frame" x="29.666666666666671" y="0.0" width="55" height="44"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYR-Ne-gxN">
-                                    <rect key="frame" x="74" y="0.0" width="70" height="44"/>
+                                    <rect key="frame" x="88.666666666666671" y="0.0" width="33.333333333333329" height="44"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -164,15 +169,13 @@
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="OYR-Ne-gxN" secondAttribute="bottom" id="11g-mt-Bxq"/>
                                 <constraint firstItem="OYR-Ne-gxN" firstAttribute="leading" secondItem="4Ae-UY-PG5" secondAttribute="trailing" constant="4" id="VoJ-kt-9ts"/>
-                                <constraint firstAttribute="trailing" secondItem="OYR-Ne-gxN" secondAttribute="trailing" id="YgK-6m-Vyv"/>
                                 <constraint firstAttribute="bottom" secondItem="4Ae-UY-PG5" secondAttribute="bottom" id="Zxm-Fm-XDb"/>
-                                <constraint firstItem="4Ae-UY-PG5" firstAttribute="leading" secondItem="bof-3l-G4j" secondAttribute="leading" id="e5Z-zB-CiF"/>
+                                <constraint firstItem="4Ae-UY-PG5" firstAttribute="centerX" secondItem="bof-3l-G4j" secondAttribute="centerX" constant="-15" id="gbS-xz-OGM"/>
                                 <constraint firstItem="OYR-Ne-gxN" firstAttribute="top" secondItem="bof-3l-G4j" secondAttribute="top" id="iSl-L3-HRt"/>
-                                <constraint firstItem="OYR-Ne-gxN" firstAttribute="width" secondItem="4Ae-UY-PG5" secondAttribute="width" id="tii-ai-RlE"/>
                                 <constraint firstItem="4Ae-UY-PG5" firstAttribute="top" secondItem="bof-3l-G4j" secondAttribute="top" id="xrP-Ia-7RX"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="QfA-cn-vMa">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="QfA-cn-vMa">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="szw-er-aM0">
                                 <rect key="frame" x="328" y="6.6666666666666679" width="31" height="31.000000000000004"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -186,7 +189,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="3hN-y0-zls" id="5st-CS-oZi"/>
                         <outlet property="changesLabel" destination="zxd-6L-lNB" id="Dbd-8p-e3K"/>
+                        <outlet property="chartView" destination="wtV-Ap-sFS" id="UjF-1v-Iec"/>
                         <outlet property="coinNameLabel" destination="4Ae-UY-PG5" id="c2N-Rr-9iy"/>
                         <outlet property="coinSymbolLabel" destination="OYR-Ne-gxN" id="MZc-Ly-xnr"/>
                         <outlet property="favoritesButton" destination="szw-er-aM0" id="mkG-cG-5hB"/>
@@ -222,9 +227,6 @@
         <image name="bitcoinsign.circle.fill" width="19" height="19"/>
         <image name="heart" width="18" height="17"/>
         <image name="heart.fill" width="18" height="17"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
